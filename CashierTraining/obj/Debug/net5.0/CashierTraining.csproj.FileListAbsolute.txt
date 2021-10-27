@@ -1,0 +1,16 @@
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\bin\Debug\net5.0\CashierTraining.exe
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\bin\Debug\net5.0\CashierTraining.deps.json
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\bin\Debug\net5.0\CashierTraining.runtimeconfig.json
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\bin\Debug\net5.0\CashierTraining.runtimeconfig.dev.json
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\bin\Debug\net5.0\CashierTraining.dll
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\bin\Debug\net5.0\ref\CashierTraining.dll
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\bin\Debug\net5.0\CashierTraining.pdb
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\obj\Debug\net5.0\CashierTraining.csproj.AssemblyReference.cache
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\obj\Debug\net5.0\CashierTraining.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\obj\Debug\net5.0\CashierTraining.AssemblyInfoInputs.cache
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\obj\Debug\net5.0\CashierTraining.AssemblyInfo.cs
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\obj\Debug\net5.0\CashierTraining.csproj.CoreCompileInputs.cache
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\obj\Debug\net5.0\CashierTraining.dll
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\obj\Debug\net5.0\ref\CashierTraining.dll
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\obj\Debug\net5.0\CashierTraining.pdb
+D:\Work\Home\Refactoring\CashierTraining\CashierTraining\obj\Debug\net5.0\CashierTraining.genruntimeconfig.cache
