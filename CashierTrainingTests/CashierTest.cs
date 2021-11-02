@@ -20,7 +20,8 @@ namespace CashierTrainingTests
             Assert.Contains("Chicago, 60601", output);
         }
 
-        void should_print_line_item_and_sales_tax_information()
+        [Fact]
+        public void should_print_line_item_and_sales_tax_information()
         {
             List<LineItem> lineItems = new List<LineItem>()
             {

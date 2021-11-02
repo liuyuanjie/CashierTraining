@@ -10,28 +10,80 @@ namespace CashierTraining
     {
         private readonly string _name;
         private readonly string _address;
-        readonly List<LineItem> _items;
+        private readonly List<LineItem> _items;
 
-        public Order(String name, String address, List<LineItem> items)
+        public Order(string name, string address, List<LineItem> items)
         {
-            this._name = name;
-            this._address = address;
-            this._items = items;
+            _name = name;
+            _address = address;
+            _items = items;
         }
 
-        public string GetCustomerName()
+        private StringBuilder GetOrderCustomContent()
         {
-            return _name;
+            StringBuilder content = new StringBuilder();
+            content.Append(_name);
+            content.Append(_address);
+
+            return content;
         }
 
-        public string GetCustomerAddress()
+        private double GetOrderTax()
         {
-            return _address;
+            double tax = 0;
+            foreach (var item in _items)
+            {
+                tax += item.GetTax();
+            }
+
+            return tax;
         }
 
-        public List<LineItem> GetLineItems()
+        private StringBuilder GetOrderTaxContent()
         {
-            return _items;
+            StringBuilder content = new StringBuilder();
+            return content.Append("Sales Tax").Append('\t').Append(GetOrderTax().ToString("F1"));
+        }
+
+        private double GetOrderAmountAndTax()
+        {
+            double amountAndTax = 0;
+            foreach (var item in _items)
+            {
+                amountAndTax += item.GetTotalAmountAndTax();
+            }
+
+            return amountAndTax;
+        }
+
+        private StringBuilder GetOrderAmountAndTaxContent()
+        {
+            StringBuilder content = new StringBuilder();
+            return content.Append("Total Amount").Append('\t').Append(GetOrderAmountAndTax().ToString("F1"));
+        }
+
+        public string GetOrderContent()
+        {
+            StringBuilder content = new StringBuilder();
+
+            content.Append(GetOrderCustomContent());
+            content.Append(GetOrderItemsContent());
+            content.Append(GetOrderTaxContent());
+            content.Append(GetOrderAmountAndTaxContent());
+
+            return content.ToString();
+        }
+
+        private StringBuilder GetOrderItemsContent()
+        {
+            StringBuilder content = new StringBuilder();
+
+            foreach (var item in _items)
+            {
+                content.Append(item.GetPrintItemContent());
+            }
+
+            return content;
         }
     }
 }
