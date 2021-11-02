@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = CashierTrainingTests
-build_property.ProjectDir = D:\Work\Home\Refactoring\CashierTraining\CashierTrainingTests\
+build_property.ProjectDir = /Users/yuanjie.liu/RiderProjects/CashierTraining/CashierTrainingTests/

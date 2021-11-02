@@ -8,35 +8,35 @@ namespace CashierTraining
 {
     public class LineItem
     {
-		private String desc;
-        private double p;
-        private int qty;
+		private readonly string _description;
+        private readonly double _price;
+        private readonly int _quantity;
 
-        public LineItem(String desc, double p, int qty)
+        public LineItem(String description, double price, int quantity)
         {
-            this.desc = desc;
-            this.p = p;
-            this.qty = qty;
+            this._description = description;
+            this._price = price;
+            this._quantity = quantity;
         }
 
-        public String getDescription()
+        public String GetDescription()
         {
-            return desc;
+            return _description;
         }
 
-        public double getPrice()
+        public double GetPrice()
         {
-            return p;
+            return _price;
         }
 
-        public int getQuantity()
+        public int GetQuantity()
         {
-            return qty;
+            return _quantity;
         }
 
-        public double totalAmount()
+        public double GeTotalAmount()
         {
-            return p * qty;
+            return _price * _quantity;
         }
 	}
 }

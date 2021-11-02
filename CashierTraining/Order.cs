@@ -8,30 +8,30 @@ namespace CashierTraining
 {
     public class Order
     {
-        String nm;
-        String addr;
-        List<LineItem> li;
+        private readonly string _name;
+        private readonly string _address;
+        readonly List<LineItem> _items;
 
-        public Order(String nm, String addr, List<LineItem> li)
+        public Order(String name, String address, List<LineItem> items)
         {
-            this.nm = nm;
-            this.addr = addr;
-            this.li = li;
+            this._name = name;
+            this._address = address;
+            this._items = items;
         }
 
-        public String getCustomerName()
+        public string GetCustomerName()
         {
-            return nm;
+            return _name;
         }
 
-        public String getCustomerAddress()
+        public string GetCustomerAddress()
         {
-            return addr;
+            return _address;
         }
 
-        public List<LineItem> getLineItems()
+        public List<LineItem> GetLineItems()
         {
-            return li;
+            return _items;
         }
     }
 }

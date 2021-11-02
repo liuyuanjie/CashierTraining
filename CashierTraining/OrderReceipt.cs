@@ -8,53 +8,50 @@ namespace CashierTraining
 {
     public class OrderReceipt
     {
-        private Order o;
+        private readonly Order _order;
 
-        public OrderReceipt(Order o)
+        public OrderReceipt(Order order)
         {
-            this.o = o;
+            this._order = order;
         }
 
-        public String printReceipt()
+        public string GetPrintReceipt()
         {
             StringBuilder output = new StringBuilder();
 
             // print headers
             output.Append("======Printing Orders======\n");
 
-            // print date, bill no, customer name
-            //        output.append("Date - " + order.getDate();
-            output.Append(o.getCustomerName());
-            output.Append(o.getCustomerAddress());
-            //        output.append(order.getCustomerLoyaltyNumber());
+            output.Append(_order.GetCustomerName());
+            output.Append(_order.GetCustomerAddress());
 
             // prints lineItems
-            double totSalesTx = 0d;
-            double tot = 0d;
-            foreach (LineItem lineItem in o.getLineItems())
+            double totalTax = 0d;
+            double totalAmount = 0d;
+            foreach (LineItem lineItem in _order.GetLineItems())
             {
-                output.Append(lineItem.getDescription());
+                output.Append(lineItem.GetDescription());
                 output.Append('\t');
-                output.Append(lineItem.getPrice());
+                output.Append(lineItem.GetPrice());
                 output.Append('\t');
-                output.Append(lineItem.getQuantity());
+                output.Append(lineItem.GetQuantity());
                 output.Append('\t');
-                output.Append(lineItem.totalAmount());
+                output.Append(lineItem.GeTotalAmount());
                 output.Append('\n');
 
                 // calculate sales tax @ rate of 10%
-                double salesTax = lineItem.totalAmount() * .10;
-                totSalesTx += salesTax;
+                double salesTax = lineItem.GeTotalAmount() * .10;
+                totalTax += salesTax;
 
                 // calculate total amount of lineItem = price * quantity + 10 % sales tax
-                tot += lineItem.totalAmount() + salesTax;
+                totalAmount += lineItem.GeTotalAmount() + salesTax;
             }
 
             // prints the state tax
-            output.Append("Sales Tax").Append('\t').Append(totSalesTx);
+            output.Append("Sales Tax").Append('\t').Append(totalTax);
 
             // print total amount
-            output.Append("Total Amount").Append('\t').Append(tot);
+            output.Append("Total Amount").Append('\t').Append(totalAmount);
             return output.ToString();
         }
     }
